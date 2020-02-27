@@ -19,4 +19,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(MainActivity.this, statusSelectionActivity.class));
 
     }
+
+    public void loadNewFriendScreen(View view) {
+        startActivity(new Intent(MainActivity.this, addFriendActivity.class));
+    }
 }

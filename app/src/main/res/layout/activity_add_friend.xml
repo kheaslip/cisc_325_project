@@ -8,7 +8,6 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/status_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/margin_large"
@@ -22,7 +21,6 @@
         android:layout_height="wrap_content">
 
         <CheckBox
-            android:id="@+id/chip_online"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -38,21 +36,18 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button_new_contact"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="New" />
 
         <Button
-            android:id="@+id/button_friends"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Friends" />
 
         <Button
-            android:id="@+id/button_map"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -60,7 +55,6 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/home_screen_friends_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -69,7 +63,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_launcher_foreground"
+            android:src="@drawable/ic_launcher_background"
             android:layout_gravity="center"
             android:layout_margin="@dimen/margin_large"
             android:background="#000000"
@@ -109,21 +103,18 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button_home_screen"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="home (replace text with image)" />
 
         <Button
-            android:id="@+id/button_events_screen"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="events (replace text with image)" />
 
         <Button
-            android:id="@+id/button_profile_screen"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
