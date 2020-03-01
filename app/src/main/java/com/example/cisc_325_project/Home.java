@@ -20,7 +20,7 @@ public class Home extends AppCompatActivity {
     }
 
     public static void setmStatus(String status) {
-        mStatus = mStatus;
+        mStatus = status;
     }
 
     public static boolean hasStatus() {
