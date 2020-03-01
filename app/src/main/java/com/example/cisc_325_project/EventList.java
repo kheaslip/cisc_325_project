@@ -42,6 +42,21 @@ public class EventList extends AppCompatActivity {
                         people.get(4), people.get(7), people.get(2), people.get(0)
                 ))));
 
+        events.add(new EventItem("Orientation Week",
+                "Join your new classmates as we play games, go to events and get familiar with what this school has to offer",
+                R.drawable.event_image_crowd_1,
+                new ArrayList<>(Arrays.asList(
+                        people.get(4), people.get(2), people.get(5), people.get(1)
+                ))));
+
+        events.add(new EventItem("Karaoke",
+                "Weekly karaoke night where you and your friends can battle-off to be the best at Bohemian Rhapsody",
+                R.drawable.event_image_karaoke,
+                new ArrayList<>(Arrays.asList(
+                        people.get(4), people.get(7), people.get(2), people.get(0), people.get(5),
+                        people.get(1), people.get(6), people.get(3)
+                ))));
+
         EventAdapter eventAdapter = new EventAdapter(this.getBaseContext(), events);
         ListView listView = (ListView) findViewById(R.id.activity_events_list);
         listView.setAdapter(eventAdapter);
