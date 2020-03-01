@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 
@@ -27,6 +28,12 @@ public class MainActivity extends AppCompatActivity {
         people.add(new Person("Mikhail Sanderson",R.drawable.profile_man_2,"Studying"));
         people.add(new Person("Blessing Baldwin",R.drawable.profile_man_3,"At conference"));
         people.add(new Person("Zacharias Phelps",R.drawable.profile_man_4,"Playing Go"));
+
+
+        FriendsAdapter fAdapter = new FriendsAdapter(this, people);
+
+        ListView listView = (ListView) findViewById(R.id.friend_list);
+        listView.setAdapter(fAdapter);
 
     }
 
