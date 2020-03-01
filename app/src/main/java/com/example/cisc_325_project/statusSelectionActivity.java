@@ -44,4 +44,10 @@ public class statusSelectionActivity extends AppCompatActivity {
     public void replaceStatusText(View view) {
         ((TextView) findViewById(R.id.change_status)).setText(((TextView) view).getText());
     }
+
+    public void confirmStatusChange(View view) {
+        String newStatus = ((TextView)findViewById(R.id.change_status)).getText().toString();
+        Home.setmStatus(newStatus);
+        findViewById(R.id.confirm_status_button).setVisibility(View.GONE);
+    }
 }
