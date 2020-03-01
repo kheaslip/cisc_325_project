@@ -106,7 +106,7 @@ public class EventList extends AppCompatActivity {
     }
 
     public void loadHomeScreen(View view) {
-        startActivity(new Intent(EventList.this, MainActivity.class));
+        startActivity(new Intent(EventList.this, Home.class));
     }
 
     public void loadProfileScreen(View view) {

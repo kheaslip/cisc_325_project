@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Login"></activity>
+        <activity android:name=".MainActivity"></activity>
         <activity android:name=".Chat"></activity>
         <activity
             android:name=".CreateEvent"
@@ -22,10 +22,10 @@
         <activity
             android:name=".Profile"
             android:label="Profile"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".Home">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".Home" />
         </activity>
         <activity
             android:name=".EventDetails"
@@ -38,25 +38,25 @@
         <activity
             android:name=".EventList"
             android:label="Events"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".Home">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".Home" />
         </activity>
         <activity
             android:name=".statusSelectionActivity"
             android:label="Status"
+            android:parentActivityName=".Home">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Home" />
+        </activity>
+        <activity
+            android:name=".Home"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
-        </activity>
-        <activity
-            android:name=".MainActivity"
-            android:parentActivityName=".Login">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Login" />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

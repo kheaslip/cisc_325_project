@@ -38,7 +38,7 @@ public class EventDetails extends AppCompatActivity {
     }
 
     public void loadHomeScreen(View view) {
-        startActivity(new Intent(EventDetails.this, MainActivity.class));
+        startActivity(new Intent(EventDetails.this, Home.class));
     }
 
     public void loadEventListScreen(View view) {

@@ -19,7 +19,7 @@ public class Profile extends AppCompatActivity {
     }
 
     public void loadHomeScreen(View view) {
-        startActivity(new Intent(Profile.this, MainActivity.class));
+        startActivity(new Intent(Profile.this, Home.class));
     }
 
     public void loadEventListScreen(View view) {
