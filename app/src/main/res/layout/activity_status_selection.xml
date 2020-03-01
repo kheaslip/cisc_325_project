@@ -52,31 +52,36 @@
                 style="@style/StatusList"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="I'm studying" />
+                android:text="I'm studying"
+                android:onClick="replaceStatusText" />
 
             <TextView
                 style="@style/StatusList"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="I'm partying" />
+                android:text="I'm partying"
+                android:onClick="replaceStatusText" />
 
             <TextView
                 style="@style/StatusList"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Looking to join an event" />
+                android:text="Looking to join an event"
+                android:onClick="replaceStatusText" />
 
             <TextView
                 style="@style/StatusList"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="I'm hanging out with friends" />
+                android:text="I'm hanging out with friends"
+                android:onClick="replaceStatusText" />
 
             <TextView
                 style="@style/StatusList"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="I'm unavailable" />
+                android:text="I'm unavailable"
+                android:onClick="replaceStatusText" />
         </LinearLayout>
 
         <LinearLayout
