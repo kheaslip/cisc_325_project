@@ -53,10 +53,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
     public void loadStatusScreen(View view) {
         startActivity(new Intent(MainActivity.this, statusSelectionActivity.class));
-
     }
 
     public void loadEventListScreen(View view) {
