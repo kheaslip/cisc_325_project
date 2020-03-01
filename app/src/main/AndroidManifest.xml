@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Profile"></activity>
         <activity android:name=".EventDetails" />
-        <activity android:name=".events" />
+        <activity android:name=".EventList" />
         <activity android:name=".addFriendActivity" />
         <activity android:name=".statusSelectionActivity" />
         <activity android:name=".MainActivity">

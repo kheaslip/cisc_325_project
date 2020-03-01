@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void loadEventListScreen(View view) {
-        startActivity(new Intent(MainActivity.this, events.class));
+        startActivity(new Intent(MainActivity.this, EventList.class));
     }
 
     public void loadProfileScreen(View view) {
