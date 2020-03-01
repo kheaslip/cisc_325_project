@@ -7,6 +7,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 
 public class EventList extends AppCompatActivity {
 
@@ -29,6 +30,9 @@ public class EventList extends AppCompatActivity {
         people.add(new Person("Zacharias Phelps",R.drawable.profile_man_4,"Playing Go"));
 
         events.add(new EventItem("Canada Day Firework Show",
+                new Date(2020, 6, 1, 21,0,0),
+                new Date(2020, 6, 1, 22,0,0),
+                "Kingston",
                 "The annual fireworks display for Canada day",
                 R.drawable.event_image_fireworks,
                 new ArrayList<>(Arrays.asList(
@@ -36,6 +40,9 @@ public class EventList extends AppCompatActivity {
                 ))));
 
         events.add(new EventItem("Local band tour",
+                new Date(2020, 3, 21, 20,0,0),
+                new Date(2020, 3, 21, 23,0,0),
+                "Kingston",
                 "Several local bands playing this weekend",
                 R.drawable.event_image_concert,
                 new ArrayList<>(Arrays.asList(
@@ -43,6 +50,9 @@ public class EventList extends AppCompatActivity {
                 ))));
 
         events.add(new EventItem("Orientation Week",
+                new Date(2020, 9, 1, 8,0,0),
+                new Date(2020, 12, 1, 23,0,0),
+                "Kingston",
                 "Join your new classmates as we play games, go to events and get familiar with what this school has to offer",
                 R.drawable.event_image_crowd_1,
                 new ArrayList<>(Arrays.asList(
@@ -50,6 +60,9 @@ public class EventList extends AppCompatActivity {
                 ))));
 
         events.add(new EventItem("Karaoke",
+                new Date(2020, 3, 14, 20,0,0),
+                new Date(2020, 3, 14, 23,0,0),
+                "Kingston",
                 "Weekly karaoke night where you and your friends can battle-off to be the best at Bohemian Rhapsody",
                 R.drawable.event_image_karaoke,
                 new ArrayList<>(Arrays.asList(
