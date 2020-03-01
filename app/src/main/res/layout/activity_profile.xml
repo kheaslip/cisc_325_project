@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/margin_large"
         android:layout_marginTop="@dimen/margin_medium"
-        android:text="I am doing ..."
+        android:text="@string/initial_default_status"
         android:layout_gravity="center"
         android:onClick="loadStatusScreen"/>
 

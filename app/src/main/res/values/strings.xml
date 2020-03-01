@@ -6,4 +6,5 @@
     <string name="tab_label_new_contact">New</string>
     <string name="tab_label_friends_list">Friends</string>
     <string name="tab_label_map">Map</string>
+    <string name="initial_default_status">I am doing ...</string>
 </resources>
