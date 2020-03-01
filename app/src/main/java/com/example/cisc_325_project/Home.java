@@ -11,6 +11,21 @@ import com.google.android.material.tabs.TabLayout;
 
 public class Home extends AppCompatActivity {
 
+    // held so that once updated by status selection screen, the change takes effect
+    private static String mStatus = null;
+
+    public static String getmStatus() {
+        return mStatus;
+    }
+
+    public static void setmStatus(String status) {
+        mStatus = mStatus;
+    }
+
+    public static boolean hasStatus() {
+        return mStatus != null;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
