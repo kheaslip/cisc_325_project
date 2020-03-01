@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".statusSelectionActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".statusSelectionActivity">
 
     <EditText
         android:id="@+id/change_status"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Im currently doing ..."/>
+        android:text="Im currently doing ..." />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,13 +25,61 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
+            <TextView
+                style="@style/StatusList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="I'm at the gym" />
+
+            <TextView
+                style="@style/StatusList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="I'm studying" />
+
+            <TextView
+                style="@style/StatusList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="I'm partying" />
+
+            <TextView
+                style="@style/StatusList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Looking to join an event" />
+
+            <TextView
+                style="@style/StatusList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="I'm hanging out with friends" />
+
+            <TextView
+                style="@style/StatusList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="I'm unavailable" />
         </LinearLayout>
 
-        <EditText
-            android:id="@+id/add_new_preset_status"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Type to add a new preset"/>
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/add_new_preset_status"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Type to add a new preset" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add" />
+        </LinearLayout>
+
     </LinearLayout>
 
 
