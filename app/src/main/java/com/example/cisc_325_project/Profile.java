@@ -20,6 +20,14 @@ public class Profile extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (Home.hasStatus()) {
+            ((Button)findViewById(R.id.status_button)).setText(Home.getmStatus());
+        }
+    }
+
     public void loadStatusScreen(View view) {
         startActivity(new Intent(Profile.this, statusSelectionActivity.class));
     }

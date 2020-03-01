@@ -20,11 +20,6 @@ public class EventList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_events);
 
-
-        if (Home.hasStatus()) {
-            ((Button)findViewById(R.id.status_button)).setText(Home.getmStatus());
-        }
-
         final ArrayList<EventItem> events = new ArrayList<EventItem>();
         final ArrayList<Person> people = new ArrayList<Person>();
 
@@ -101,6 +96,14 @@ public class EventList extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (Home.hasStatus()) {
+            ((Button)findViewById(R.id.status_button)).setText(Home.getmStatus());
+        }
     }
 
     public void loadEventCreationScreen(View view) {

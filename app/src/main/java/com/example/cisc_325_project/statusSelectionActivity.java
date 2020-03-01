@@ -40,6 +40,13 @@ public class statusSelectionActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (Home.hasStatus()) {
+            ((EditText)findViewById(R.id.change_status)).setText(Home.getmStatus());
+        }
+    }
 
     public void replaceStatusText(View view) {
         ((TextView) findViewById(R.id.change_status)).setText(((TextView) view).getText());

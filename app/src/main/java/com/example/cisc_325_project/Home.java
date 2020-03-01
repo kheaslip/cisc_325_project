@@ -32,10 +32,6 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        if (mStatus == null) {
-            mStatus = ((Button)findViewById(R.id.status_button)).getText().toString();
-        }
-
         // create the tab bar for the home screen
         TabLayout tabLayout = findViewById(R.id.home_screen_tab_bar);
 
@@ -71,6 +67,14 @@ public class Home extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (Home.hasStatus()) {
+            ((Button)findViewById(R.id.status_button)).setText(Home.getmStatus());
+        }
     }
 
     public void loadStatusScreen(View view) {
