@@ -41,7 +41,7 @@ public class statusSelectionActivity extends AppCompatActivity {
     }
 
 
-    public void updateStatus(View view) {
+    public void replaceStatusText(View view) {
         ((TextView) findViewById(R.id.change_status)).setText(((TextView) view).getText());
     }
 }

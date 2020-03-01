@@ -45,7 +45,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="I'm at the gym"
-                android:onClick="updateStatus"/>
+                android:onClick="replaceStatusText"/>
 
             <TextView
                 style="@style/StatusList"
