@@ -1,6 +1,8 @@
 package com.example.cisc_325_project;
 
-public class Person {
+import java.io.Serializable;
+
+public class Person implements Serializable {
 
     private String mName;
     private String mStatus;
