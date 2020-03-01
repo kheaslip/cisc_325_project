@@ -18,8 +18,7 @@
             android:id="@+id/chat_receiver_image"
             android:layout_width="64dp"
             android:layout_height="64dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/profile_man_1" />
+            android:scaleType="centerCrop" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -49,11 +48,12 @@
 
     </LinearLayout>
 
-    <TextView
+    <LinearLayout
         android:id="@+id/chat_log"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:orientation="vertical"
         android:text="" />
 
     <LinearLayout
@@ -66,13 +66,14 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="type"
-            android:inputType="text" />
+            android:hint="long"
+            android:inputType="textLongMessage" />
 
         <Button
             android:id="@+id/chat_send_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Send" />
+            android:text="Send"
+            android:onClick="addMessageToChatLog"/>
     </LinearLayout>
 </LinearLayout>
