@@ -6,6 +6,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -30,6 +31,10 @@ public class Home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        if (mStatus == null) {
+            mStatus = ((Button)findViewById(R.id.status_button)).getText().toString();
+        }
 
         // create the tab bar for the home screen
         TabLayout tabLayout = findViewById(R.id.home_screen_tab_bar);
