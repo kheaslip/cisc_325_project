@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         // setup the parts to handle the detecting and changing of home tabs
         viewPager.setAdapter(pageAdapter);
+        viewPager.setCurrentItem(1);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
