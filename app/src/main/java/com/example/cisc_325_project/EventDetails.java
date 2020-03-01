@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -34,5 +35,17 @@ public class EventDetails extends AppCompatActivity {
         ((TextView)findViewById(R.id.activity_event_details_time)).setText("N/A");
         ((ImageView)findViewById(R.id.activity_event_details_image)).setImageResource(imageResource);
 
+    }
+
+    public void loadHomeScreen(View view) {
+        startActivity(new Intent(EventDetails.this, MainActivity.class));
+    }
+
+    public void loadEventListScreen(View view) {
+        startActivity(new Intent(EventDetails.this, EventList.class));
+    }
+
+    public void loadProfileScreen(View view) {
+        startActivity(new Intent(EventDetails.this, Profile.class));
     }
 }
