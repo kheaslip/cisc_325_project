@@ -23,4 +23,8 @@ public class Person {
     public String getmStatus() {
         return mStatus;
     }
+
+    public boolean hasImage() {
+        return mResourceImage != 0;
+    }
 }
