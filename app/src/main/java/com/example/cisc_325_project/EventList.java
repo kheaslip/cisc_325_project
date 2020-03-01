@@ -96,4 +96,8 @@ public class EventList extends AppCompatActivity {
         });
 
     }
+
+    public void loadEventCreationScreen(View view) {
+        startActivity(new Intent(EventList.this, CreateEvent.class));
+    }
 }
