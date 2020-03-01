@@ -2,7 +2,10 @@ package com.example.cisc_325_project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -73,6 +76,24 @@ public class EventList extends AppCompatActivity {
         EventAdapter eventAdapter = new EventAdapter(this.getBaseContext(), events);
         ListView listView = (ListView) findViewById(R.id.activity_events_list);
         listView.setAdapter(eventAdapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getApplicationContext(), EventDetails.class);
+                EventItem eventItem = events.get(position);
+
+                intent.putExtra("name", eventItem.getmName());
+                intent.putExtra("start", eventItem.getmStartDate());
+                intent.putExtra("end", eventItem.getmEndDate());
+                intent.putExtra("location", eventItem.getmLocation());
+                intent.putExtra("details", eventItem.getmDetails());
+                intent.putExtra("image", eventItem.getmImageResource());
+                intent.putExtra("attendees", eventItem.getmAttendees());
+
+                startActivity(intent);
+
+            }
+        });
 
     }
 }
