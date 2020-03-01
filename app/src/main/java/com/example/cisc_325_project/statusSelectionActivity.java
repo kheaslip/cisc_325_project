@@ -21,7 +21,6 @@ public class statusSelectionActivity extends AppCompatActivity {
             ((EditText)findViewById(R.id.change_status)).setText(Home.getmStatus());
         }
 
-        final Button updateStatusButton = (Button) findViewById(R.id.confirm_status_button);
         EditText editText = (EditText) findViewById(R.id.change_status);
         editText.addTextChangedListener(new TextWatcher() {
             @Override
@@ -36,7 +35,7 @@ public class statusSelectionActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                updateStatusButton.setVisibility(View.VISIBLE);
+                findViewById(R.id.confirm_status_button).setVisibility(View.VISIBLE);
             }
         });
     }
