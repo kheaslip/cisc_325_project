@@ -1,6 +1,7 @@
 package com.example.cisc_325_project;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -8,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -46,6 +48,19 @@ public class FriendsList extends Fragment {
 
         ListView listView = (ListView) rootView.findViewById(R.id.friend_list);
         listView.setAdapter(fAdapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getContext(), Chat.class);
+                Person person = people.get(position);
+
+                intent.putExtra("name", person.getmName());
+                intent.putExtra("image", person.getmResourceImage());
+                intent.putExtra("status", person.getmStatus());
+
+                startActivity(intent);
+            }
+        });
 
         // Inflate the layout for this fragment
         return rootView;
