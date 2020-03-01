@@ -8,6 +8,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 
 /**
@@ -24,8 +27,28 @@ public class FriendsList extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        final ArrayList<Person> people = new ArrayList<Person>();
+
+        people.add(new Person("Sasha Beltran", R.drawable.profile_woman_1, "At the gym"));
+        people.add(new Person("Harmony Bennett", R.drawable.profile_woman_2, "Studying"));
+        people.add(new Person("Tori Mcbride", R.drawable.profile_woman_3, "At the dinning hall"));
+        people.add(new Person("Saniya Hodson", R.drawable.profile_woman_4, "Playing basketball"));
+
+        people.add(new Person("Colin Woodard",R.drawable.profile_man_1,"At the dinning hall"));
+        people.add(new Person("Mikhail Sanderson",R.drawable.profile_man_2,"Studying"));
+        people.add(new Person("Blessing Baldwin",R.drawable.profile_man_3,"At conference"));
+        people.add(new Person("Zacharias Phelps",R.drawable.profile_man_4,"Playing Go"));
+
+        View rootView = inflater.inflate(R.layout.fragment_friends_list, container, false);
+
+        FriendsAdapter fAdapter = new FriendsAdapter(this.getContext(), people);
+
+        ListView listView = (ListView) rootView.findViewById(R.id.friend_list);
+        listView.setAdapter(fAdapter);
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_friends_list, container, false);
+        return rootView;
     }
 
 }
