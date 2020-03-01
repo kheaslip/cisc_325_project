@@ -29,7 +29,8 @@
                 style="@style/StatusList"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="I'm at the gym" />
+                android:text="I'm at the gym"
+                android:onClick="updateStatus"/>
 
             <TextView
                 style="@style/StatusList"
