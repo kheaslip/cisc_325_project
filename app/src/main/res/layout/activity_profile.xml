@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".Profile"
     android:orientation="vertical">
 
     <Button
@@ -14,7 +14,8 @@
         android:layout_marginHorizontal="@dimen/margin_large"
         android:layout_marginTop="@dimen/margin_medium"
         android:text="I am doing ..."
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:onClick="loadStatusScreen"/>
 
     <ImageView
         android:layout_width="wrap_content"
@@ -155,20 +156,22 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="home (replace text with image)" />
+            android:text="home"
+            android:onClick="loadHomeScreen"/>
 
         <Button
             android:id="@+id/button_events_screen"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="events (replace text with image)"/>
+            android:text="events"
+            android:onClick="loadEventListScreen"/>
 
         <Button
             android:id="@+id/button_profile_screen"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="profile (replace text with image)" />
+            android:text="profile" />
     </LinearLayout>
 </LinearLayout>

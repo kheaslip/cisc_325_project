@@ -2,7 +2,9 @@ package com.example.cisc_325_project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 public class Profile extends AppCompatActivity {
 
@@ -11,4 +13,17 @@ public class Profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
     }
+
+    public void loadStatusScreen(View view) {
+        startActivity(new Intent(Profile.this, statusSelectionActivity.class));
+    }
+
+    public void loadHomeScreen(View view) {
+        startActivity(new Intent(Profile.this, MainActivity.class));
+    }
+
+    public void loadEventListScreen(View view) {
+        startActivity(new Intent(Profile.this, EventList.class));
+    }
+
 }
