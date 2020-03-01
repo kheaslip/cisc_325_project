@@ -59,10 +59,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void loadNewFriendScreen(View view) {
-        startActivity(new Intent(MainActivity.this, addFriendActivity.class));
-    }
-
     public void loadEventListScreen(View view) {
         startActivity(new Intent(MainActivity.this, EventList.class));
     }
