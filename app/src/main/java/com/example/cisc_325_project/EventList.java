@@ -100,4 +100,16 @@ public class EventList extends AppCompatActivity {
     public void loadEventCreationScreen(View view) {
         startActivity(new Intent(EventList.this, CreateEvent.class));
     }
+
+    public void loadStatusScreen(View view) {
+        startActivity(new Intent(EventList.this, statusSelectionActivity.class));
+    }
+
+    public void loadHomeScreen(View view) {
+        startActivity(new Intent(EventList.this, MainActivity.class));
+    }
+
+    public void loadProfileScreen(View view) {
+        startActivity(new Intent(EventList.this, Profile.class));
+    }
 }
