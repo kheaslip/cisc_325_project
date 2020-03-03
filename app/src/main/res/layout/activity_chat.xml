@@ -63,10 +63,11 @@
 
         <EditText
             android:id="@+id/chat_text_bar"
-            android:layout_width="0dp"
+            android:layout_width="5dp"
+
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="long"
+            android:hint="Type here to chat!"
             android:inputType="textLongMessage" />
 
         <Button
@@ -74,6 +75,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Send"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
             android:onClick="addMessageToChatLog"/>
     </LinearLayout>
 </LinearLayout>

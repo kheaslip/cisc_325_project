@@ -126,25 +126,31 @@
         <Button
             android:id="@+id/button_home_screen"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="27dp"
             android:layout_weight="1"
-            android:text="home"
-            android:onClick="loadHomeScreen"/>
+            android:height="8dp"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:text="home" />
 
         <Button
             android:id="@+id/button_events_screen"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="27dp"
             android:layout_weight="1"
-            android:text="events"
-            android:onClick="loadEventListScreen"/>
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:onClick="loadEventListScreen"
+            android:text="events" />
 
         <Button
             android:id="@+id/button_profile_screen"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="27dp"
             android:layout_weight="1"
-            android:text="profile"
-            android:onClick="loadProfileScreen"/>
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:onClick="loadProfileScreen"
+            android:text="profile" />
     </LinearLayout>
 </LinearLayout>

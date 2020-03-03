@@ -14,16 +14,16 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="102dp"
             android:layout_height="match_parent"
-            android:text="Event name"
-            android:gravity="center_vertical"/>
+            android:gravity="center_vertical"
+            android:text="Event name" />
 
         <EditText
             android:id="@+id/activity_create_event_name"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"/>
+            android:layout_width="73dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
 
     </LinearLayout>
 
@@ -33,15 +33,15 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="102dp"
             android:layout_height="match_parent"
-            android:text="Date"
-            android:gravity="center_vertical"/>
+            android:gravity="center_vertical"
+            android:text="Date" />
 
         <EditText
             android:id="@+id/activity_create_event_start_date"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:inputType="text" />
 
     </LinearLayout>
@@ -52,10 +52,10 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="102dp"
             android:layout_height="match_parent"
-            android:text="Time"
-            android:gravity="center_vertical"/>
+            android:gravity="center_vertical"
+            android:text="Time" />
 
         <EditText
             android:id="@+id/activity_create_event_start_time"
@@ -71,10 +71,10 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="102dp"
             android:layout_height="match_parent"
-            android:text="Location"
-            android:gravity="center_vertical"/>
+            android:gravity="center_vertical"
+            android:text="Location" />
 
         <EditText
             android:id="@+id/activity_create_event_location"
@@ -87,27 +87,34 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingBottom="20dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="102dp"
             android:layout_height="match_parent"
+            android:gravity="center_vertical"
             android:text="Details"
-            android:gravity="center_vertical"/>
+            android:paddingTop="15dp"/>
 
         <EditText
             android:id="@+id/activity_create_event_details"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text" />
+            android:inputType="text"
+            />
+
+
 
     </LinearLayout>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Create"
         android:layout_gravity="center"
-        android:onClick="createEventButton"/>
+        android:background="@color/colorPrimary"
+        android:onClick="createEventButton"
+        android:text="Create"
+        android:textColor="@android:color/white" />
 
 </LinearLayout>
