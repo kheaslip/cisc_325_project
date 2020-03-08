@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -57,7 +58,7 @@ public class EventList extends AppCompatActivity {
                 new Date(2020, 9, 1, 8,0,0),
                 new Date(2020, 12, 1, 23,0,0),
                 "Kingston",
-                "Join your new classmates as we play games, go to events and get familiar with what this school has to offer",
+                "Join your new classmates as we play games.",
                 R.drawable.event_image_crowd_1,
                 new ArrayList<>(Arrays.asList(
                         people.get(4), people.get(2), people.get(5), people.get(1)
@@ -67,15 +68,18 @@ public class EventList extends AppCompatActivity {
                 new Date(2020, 3, 14, 20,0,0),
                 new Date(2020, 3, 14, 23,0,0),
                 "Kingston",
-                "Weekly karaoke night where you and your friends can battle-off to be the best at Bohemian Rhapsody",
+                "Weekly karaoke night where you and your friends can battle-off.",
                 R.drawable.event_image_karaoke,
                 new ArrayList<>(Arrays.asList(
                         people.get(4), people.get(7), people.get(2), people.get(0), people.get(5),
                         people.get(1), people.get(6), people.get(3)
                 ))));
 
+
+
         EventAdapter eventAdapter = new EventAdapter(this.getBaseContext(), events);
         ListView listView = (ListView) findViewById(R.id.activity_events_list);
+
         listView.setAdapter(eventAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

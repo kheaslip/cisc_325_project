@@ -112,7 +112,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/blue_rounded_button"
+        style="?android:attr/borderlessButtonStyle"
         android:onClick="createEventButton"
         android:text="Create"
         android:textColor="@android:color/white" />

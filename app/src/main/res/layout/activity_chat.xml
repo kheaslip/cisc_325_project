@@ -14,11 +14,19 @@
         android:layout_margin="@dimen/margin_small"
         android:orientation="horizontal">
 
-        <ImageView
+<!--        <ImageView-->
+<!--            android:id="@+id/chat_receiver_image"-->
+<!--            android:layout_width="64dp"-->
+<!--            android:layout_height="64dp"-->
+<!--            android:scaleType="centerCrop" />-->
+
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/chat_receiver_image"
             android:layout_width="64dp"
             android:layout_height="64dp"
-            android:scaleType="centerCrop" />
+            android:scaleType="centerCrop"
+
+            />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -32,6 +40,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_weight="1"
+                android:textSize="18dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
                 android:layout_gravity="bottom"
                 android:text="Name" />
 
@@ -40,6 +51,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_weight="1"
+                android:layout_marginLeft="10dp"
                 android:layout_gravity="top"
                 android:text="Status" />
 
@@ -53,8 +65,11 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="15dp"
         android:orientation="vertical"
-        android:text="" />
+        android:text=""
+        android:textSize= "15dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -63,7 +78,7 @@
 
         <EditText
             android:id="@+id/chat_text_bar"
-            android:layout_width="5dp"
+            android:layout_width="230dp"
 
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -75,7 +90,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Send"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/blue_rounded_button"
+            style="?android:attr/borderlessButtonStyle"
             android:textColor="@android:color/white"
             android:onClick="addMessageToChatLog"/>
     </LinearLayout>

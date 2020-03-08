@@ -7,19 +7,23 @@
     tools:context=".Home"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/activity_event_details_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin_large"
-        android:text="EventName"
-        android:layout_gravity="center"/>
 
-    <ImageView
-        android:layout_width="64dp"
-        android:layout_height="64dp"
+<!--    <ImageView-->
+<!--        android:id="@+id/activity_event_details_image"-->
+<!--        android:layout_width="263dp"-->
+<!--        android:layout_height="173dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:background="@drawable/rounded" />-->
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/activity_event_details_image"
+        android:layout_width="198dp"
+        android:layout_height="131dp"
+        android:layout_marginTop="20dp"
         android:layout_gravity="center"
-        android:id="@+id/activity_event_details_image" />
+
+        android:src="@drawable/event_image_concert"
+         />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,16 +31,28 @@
         android:layout_weight="1"
         android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/activity_event_details_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_large"
+            android:text="EventName"
+            android:textSize="20dp" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginBottom="@dimen/margin_medium">
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_marginTop="16dp"
+            >
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Date:"
+                android:textSize="15dp"
                 android:layout_marginLeft="@dimen/margin_small"/>
 
             <TextView
@@ -44,7 +60,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:layout_marginRight="10dp"
                 android:text="Jan 1th, 2021"
+                android:textSize="15dp"
                 android:layout_marginLeft="@dimen/margin_small" />
         </LinearLayout>
 
@@ -58,6 +76,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Time:"
+                android:textSize="15dp"
                 android:layout_marginLeft="@dimen/margin_small" />
 
             <TextView
@@ -65,7 +84,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:layout_marginRight="10dp"
                 android:text="Noon"
+                android:textSize="15dp"
                 android:layout_marginLeft="@dimen/margin_small" />
         </LinearLayout>
 
@@ -79,6 +100,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Place"
+                android:textSize="15dp"
                 android:layout_marginLeft="@dimen/margin_small" />
 
             <TextView
@@ -87,6 +109,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Nowhere"
+                android:layout_marginRight="10dp"
+                android:textSize="15dp"
                 android:layout_marginLeft="@dimen/margin_small" />
         </LinearLayout>
 
@@ -100,15 +124,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Details"
+                android:textSize="15dp"
                 android:layout_marginLeft="@dimen/margin_small" />
 
             <TextView
                 android:id="@+id/activity_event_details_details"
-                android:layout_width="wrap_content"
+                android:layout_width="296dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                android:layout_marginLeft="@dimen/margin_small" />
+                android:textSize="15dp" />
         </LinearLayout>
 
         <GridLayout
