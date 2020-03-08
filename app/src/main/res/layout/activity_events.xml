@@ -74,6 +74,7 @@
             android:height="8dp"
             android:background="@color/colorPrimary"
             android:textColor="@android:color/white"
+            android:onClick="loadHomeScreen"
             android:text="home" />
 
         <Button

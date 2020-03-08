@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home"
+    tools:context=".EventDetails"
     android:orientation="vertical">
 
 
@@ -158,6 +158,7 @@
             android:height="8dp"
             android:background="@color/colorPrimary"
             android:textColor="@android:color/white"
+            android:onClick="loadHomeScreen"
             android:text="home" />
 
         <Button
