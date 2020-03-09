@@ -7,8 +7,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.android.material.tabs.TabLayout;
+
+import org.w3c.dom.Text;
 
 public class Home extends AppCompatActivity {
 
@@ -42,9 +45,12 @@ public class Home extends AppCompatActivity {
 
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
+
         final ViewPager viewPager =findViewById(R.id.home_pager);
         final PageAdapter pageAdapter = new PageAdapter(
                 getSupportFragmentManager(), tabLayout.getTabCount());
+
+
 
         // setup the parts to handle the detecting and changing of home tabs
         viewPager.setAdapter(pageAdapter);

@@ -14,15 +14,23 @@
         android:layout_marginHorizontal="@dimen/margin_large"
         android:layout_marginTop="@dimen/margin_medium"
         android:text="@string/initial_default_status"
+        android:background="@drawable/rounded_button"
+        style="?android:attr/borderlessButtonStyle"
         android:layout_gravity="center"
         android:onClick="loadStatusScreen"/>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/chat_receiver_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_gravity="center"
-        android:src="@drawable/ic_launcher_background"
-        android:layout_margin="@dimen/margin_large"/>
+        android:src="@drawable/man_forest"
+        android:layout_margin="24dp"
+        android:scaleType="centerCrop"
+
+        />
 
 
     <LinearLayout
@@ -50,97 +58,124 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <ImageView
-                android:layout_width="wrap_content"
+                android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/margin_small"
                 android:layout_marginTop="@dimen/margin_medium"
                 android:src="@drawable/baseline_calendar_today_black_24" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="352dp"
+                android:layout_height="36dp"
                 android:layout_gravity="center"
-                android:text="Events"/>
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="Events" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <ImageView
-                android:layout_width="wrap_content"
+                android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/margin_small"
                 android:layout_marginTop="@dimen/margin_medium"
                 android:src="@drawable/baseline_bookmark_border_black_24" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="352dp"
+                android:layout_height="36dp"
                 android:layout_gravity="center"
-                android:text="Saved"/>
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="Saved"
+
+                />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <ImageView
-                android:layout_width="wrap_content"
+                android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/margin_small"
                 android:layout_marginTop="@dimen/margin_medium"
                 android:src="@drawable/baseline_chat_bubble_outline_black_24" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="352dp"
+                android:layout_height="36dp"
                 android:layout_gravity="center"
-                android:text="Chat"/>
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="Chat" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <ImageView
-                android:layout_width="wrap_content"
+                android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/margin_small"
                 android:layout_marginTop="@dimen/margin_medium"
                 android:src="@drawable/baseline_settings_black_24" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="352dp"
+                android:layout_height="36dp"
+
                 android:layout_gravity="center"
-                android:text="Settings"/>
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded_button"
+
+                android:text="Settings" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <ImageView
-                android:layout_width="wrap_content"
+                android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/margin_small"
                 android:layout_marginTop="@dimen/margin_medium"
                 android:src="@drawable/baseline_exit_to_app_black_24" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+
+                android:layout_width="352dp"
+                android:layout_height="36dp"
                 android:layout_gravity="center"
-                android:text="Logout"/>
+                android:layout_marginBottom="5dp"
+
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded_button"
+                style="?android:attr/borderlessButtonStyle"
+
+                android:text="Logout" />
 
         </LinearLayout>
 
@@ -154,24 +189,31 @@
         <Button
             android:id="@+id/button_home_screen"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="27dp"
             android:layout_weight="1"
-            android:text="home"
-            android:onClick="loadHomeScreen"/>
+            android:height="8dp"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:onClick="loadHomeScreen"
+            android:text="home" />
 
         <Button
             android:id="@+id/button_events_screen"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="27dp"
             android:layout_weight="1"
-            android:text="events"
-            android:onClick="loadEventListScreen"/>
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:onClick="loadEventListScreen"
+            android:text="events" />
 
         <Button
             android:id="@+id/button_profile_screen"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="27dp"
             android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
             android:text="profile" />
     </LinearLayout>
 </LinearLayout>
