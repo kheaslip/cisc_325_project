@@ -1,0 +1,16 @@
+The following photo assets from [Pexels](https://www.pexels.com/photo-license/) are used under their conditional free-use [license](Pexels_stock_photos_license.html):
+
+- [event_image_concert.jpg](https://www.pexels.com/photo/group-of-people-raise-their-hands-on-stadium-976866/)
+- [event_image_crowd_1.jpg](https://www.pexels.com/photo/action-adults-celebration-clouds-433452/)
+- [event_image_fireworks.jpg](https://www.pexels.com/photo/photo-of-fireworks-display-2526105/)
+- [event_image_karaoke.jpg](https://www.pexels.com/photo/group-of-people-standing-inside-room-2608517/)
+- [event_image_lecture_hall.jpg](https://www.pexels.com/photo/auditorium-benches-chairs-class-207691/)
+- [event_image_wedding.jpg](https://www.pexels.com/photo/celebration-chairs-party-table-setting-50675/)
+- [profile_man_1.jpg](https://www.pexels.com/photo/adult-beard-boy-casual-220453/)
+- [profile_man_2.jpg](https://www.pexels.com/photo/portrait-photo-of-smiling-man-with-his-arms-crossed-standing-in-front-of-white-wall-2379004/)
+- [profile_man_3.jpg](https://www.pexels.com/photo/photography-of-a-guy-wearing-green-shirt-1222271/)
+- [profile_man_4.jpg](https://www.pexels.com/photo/man-in-red-jacket-1681010/)
+- [profile_woman_1.jpg](https://www.pexels.com/photo/adult-attractive-beautiful-beauty-415829/)
+- [profile_woman_2.jpg](https://www.pexels.com/photo/short-haired-woman-holding-her-ear-1895160/)
+- [profile_woman_3.jpg](https://www.pexels.com/photo/women-s-white-and-black-button-up-collared-shirt-774909/)
+- [profile_woman_4.jpg](https://www.pexels.com/photo/woman-smiling-1102341/)
