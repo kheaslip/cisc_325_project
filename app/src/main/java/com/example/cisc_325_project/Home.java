@@ -39,7 +39,6 @@ public class Home extends AppCompatActivity {
         TabLayout tabLayout = findViewById(R.id.home_screen_tab_bar);
 
         // give the home screen tabs labels
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label_new_contact));
         tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label_friends_list));
         tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label_map));
 
@@ -54,7 +53,6 @@ public class Home extends AppCompatActivity {
 
         // setup the parts to handle the detecting and changing of home tabs
         viewPager.setAdapter(pageAdapter);
-        viewPager.setCurrentItem(1);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override

@@ -17,9 +17,8 @@ public class PageAdapter extends FragmentStatePagerAdapter {
     @Override
     public Fragment getItem(int position) {
         switch (position) {
-            case 0: return new AddContact();
-            case 1: return new FriendsList();
-            case 2: return new Map();
+            case 0: return new FriendsList();
+            case 1: return new Map();
             default: return null;
         }
     }
