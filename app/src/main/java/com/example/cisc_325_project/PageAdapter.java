@@ -18,7 +18,8 @@ public class PageAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0: return new FriendsList();
-            case 1: return new Map();
+            case 1: return new EventList();
+            case 2: return new Map();
             default: return null;
         }
     }

@@ -40,6 +40,7 @@ public class Home extends AppCompatActivity {
 
         // give the home screen tabs labels
         tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label_friends_list));
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label_events));
         tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label_map));
 
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
