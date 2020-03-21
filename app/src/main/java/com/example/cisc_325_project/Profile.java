@@ -40,4 +40,7 @@ public class Profile extends AppCompatActivity {
         startActivity(new Intent(Profile.this, EventList.class));
     }
 
+    public void loadAddContactScreen(View view) {
+        startActivity(new Intent(Profile.this, AddContact.class));
+    }
 }
