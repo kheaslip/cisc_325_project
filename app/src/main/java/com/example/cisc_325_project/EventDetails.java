@@ -41,10 +41,6 @@ public class EventDetails extends AppCompatActivity {
         startActivity(new Intent(EventDetails.this, Home.class));
     }
 
-    public void loadEventListScreen(View view) {
-        startActivity(new Intent(EventDetails.this, EventList.class));
-    }
-
     public void loadProfileScreen(View view) {
         startActivity(new Intent(EventDetails.this, Profile.class));
     }

@@ -35,11 +35,6 @@ public class Profile extends AppCompatActivity {
     public void loadHomeScreen(View view) {
         startActivity(new Intent(Profile.this, Home.class));
     }
-
-    public void loadEventListScreen(View view) {
-        startActivity(new Intent(Profile.this, EventList.class));
-    }
-
     public void loadAddContactScreen(View view) {
         startActivity(new Intent(Profile.this, AddContact.class));
     }

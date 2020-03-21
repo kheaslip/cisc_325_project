@@ -86,10 +86,6 @@ public class Home extends AppCompatActivity {
         startActivity(new Intent(Home.this, statusSelectionActivity.class));
     }
 
-    public void loadEventListScreen(View view) {
-        startActivity(new Intent(Home.this, EventList.class));
-    }
-
     public void loadProfileScreen(View view) {
         startActivity(new Intent(Home.this, Profile.class));
     }
