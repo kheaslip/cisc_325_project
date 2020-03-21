@@ -9,6 +9,57 @@
     android:textColor="@color/colorAccent"
     tools:context=".Home">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/button_home_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:src="@drawable/baseline_home_black_24"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="home button"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/button_profile_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:src="@drawable/baseline_person_black_24"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="loadProfileScreen"
+            android:contentDescription="profile button"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:textColor="@android:color/white" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/chip_online"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/margin_tiny"
+                android:layout_marginRight="@dimen/margin_small"
+                android:text="Offline" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
     <Button
         android:id="@+id/status_button"
         style="?android:attr/borderlessButtonStyle"
@@ -21,20 +72,7 @@
         android:onClick="loadStatusScreen"
         android:text="@string/initial_default_status" />
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
 
-        <CheckBox
-            android:id="@+id/chip_online"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="0dp"
-            android:layout_marginRight="@dimen/margin_medium"
-            android:text="Offline" />
-
-    </RelativeLayout>
 
     <com.google.android.material.tabs.TabLayout
 
@@ -57,15 +95,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/button_home_screen"
-            android:layout_width="0dp"
-            android:layout_height="27dp"
-            android:layout_weight="1"
-            android:height="8dp"
-            android:background="@color/colorPrimary"
-            android:text="home"
-            android:textColor="@android:color/white" />
+
 
         <Button
             android:id="@+id/button_events_screen"
@@ -77,14 +107,6 @@
             android:text="events"
             android:textColor="@android:color/white" />
 
-        <Button
-            android:id="@+id/button_profile_screen"
-            android:layout_width="0dp"
-            android:layout_height="27dp"
-            android:layout_weight="1"
-            android:background="@color/colorPrimary"
-            android:onClick="loadProfileScreen"
-            android:text="profile"
-            android:textColor="@android:color/white" />
+
     </LinearLayout>
 </LinearLayout>
