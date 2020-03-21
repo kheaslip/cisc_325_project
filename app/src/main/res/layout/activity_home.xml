@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
 
-    android:textColor="@color/colorAccent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:textColor="@color/colorAccent"
+    tools:context=".Home">
 
     <Button
         android:id="@+id/status_button"
+        style="?android:attr/borderlessButtonStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginHorizontal="@dimen/margin_large"
         android:layout_marginTop="@dimen/margin_medium"
-        android:text="@string/initial_default_status"
         android:background="@drawable/rounded_button"
-        style="?android:attr/borderlessButtonStyle"
-        android:layout_gravity="center"
-        android:onClick="loadStatusScreen"/>
+        android:onClick="loadStatusScreen"
+        android:text="@string/initial_default_status" />
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -31,15 +30,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:text="Offline"
             android:layout_marginTop="0dp"
-            android:layout_marginRight="@dimen/margin_medium"/>
+            android:layout_marginRight="@dimen/margin_medium"
+            android:text="Offline" />
 
     </RelativeLayout>
 
     <com.google.android.material.tabs.TabLayout
 
-    android:id="@+id/home_screen_tab_bar"
+        android:id="@+id/home_screen_tab_bar"
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:height="5dp"
@@ -65,8 +64,8 @@
             android:layout_weight="1"
             android:height="8dp"
             android:background="@color/colorPrimary"
-            android:textColor="@android:color/white"
-            android:text="home" />
+            android:text="home"
+            android:textColor="@android:color/white" />
 
         <Button
             android:id="@+id/button_events_screen"
@@ -74,9 +73,9 @@
             android:layout_height="27dp"
             android:layout_weight="1"
             android:background="@color/colorPrimary"
-            android:textColor="@android:color/white"
             android:onClick="loadEventListScreen"
-            android:text="events" />
+            android:text="events"
+            android:textColor="@android:color/white" />
 
         <Button
             android:id="@+id/button_profile_screen"
@@ -84,8 +83,8 @@
             android:layout_height="27dp"
             android:layout_weight="1"
             android:background="@color/colorPrimary"
-            android:textColor="@android:color/white"
             android:onClick="loadProfileScreen"
-            android:text="profile" />
+            android:text="profile"
+            android:textColor="@android:color/white" />
     </LinearLayout>
 </LinearLayout>

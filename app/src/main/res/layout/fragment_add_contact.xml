@@ -3,44 +3,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddContact"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".AddContact">
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_launcher_background"
         android:layout_gravity="center"
         android:layout_margin="@dimen/margin_large"
         android:background="#000000"
-        />
+        android:src="@drawable/ic_launcher_background" />
 
     <EditText
         android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
+        android:layout_marginHorizontal="@dimen/margin_small"
         android:hint="Name"
-        android:layout_marginHorizontal="@dimen/margin_small"/>
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/editText2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="phone"
+        android:layout_marginHorizontal="@dimen/margin_small"
         android:hint="Phone"
-        android:layout_marginHorizontal="@dimen/margin_small"/>
+        android:inputType="phone" />
 
     <Button
         android:id="@+id/button_add_friend"
+        style="?android:attr/borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/blue_rounded_button"
-        style="?android:attr/borderlessButtonStyle"
-        android:textColor="@android:color/white"
-        android:text="Add"
         android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/margin_small"
         android:layout_marginTop="@dimen/margin_medium"
-        android:layout_marginHorizontal="@dimen/margin_small"/>
+        android:background="@drawable/blue_rounded_button"
+        android:text="Add"
+        android:textColor="@android:color/white" />
 
 </LinearLayout>
