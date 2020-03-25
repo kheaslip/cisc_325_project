@@ -14,11 +14,7 @@
         android:layout_margin="@dimen/margin_small"
         android:orientation="horizontal">
 
-<!--        <ImageView-->
-<!--            android:id="@+id/chat_receiver_image"-->
-<!--            android:layout_width="64dp"-->
-<!--            android:layout_height="64dp"-->
-<!--            android:scaleType="centerCrop" />-->
+
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/chat_receiver_image"

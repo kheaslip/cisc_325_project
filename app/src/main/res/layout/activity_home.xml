@@ -18,7 +18,7 @@
             android:id="@+id/button_home_screen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
+
             android:src="@drawable/baseline_home_black_24"
             android:clickable="true"
             android:focusable="true"
@@ -31,7 +31,7 @@
             android:id="@+id/button_profile_screen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
+
             android:src="@drawable/baseline_person_black_24"
             android:clickable="true"
             android:focusable="true"
@@ -51,6 +51,7 @@
                 android:id="@+id/chip_online"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="@dimen/margin_tiny"
                 android:layout_marginRight="@dimen/margin_small"
@@ -73,11 +74,11 @@
         android:text="@string/initial_default_status" />
 
 
-
     <com.google.android.material.tabs.TabLayout
 
         android:id="@+id/home_screen_tab_bar"
         android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
         android:layout_height="35dp"
         android:height="5dp"
         android:background="?attr/colorAccent"

@@ -136,12 +136,85 @@
                 android:layout_weight="1"
                 android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 android:textSize="15dp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/margin_medium">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New People To Meet: "
+                android:textSize="15dp"
+                android:layout_marginRight="80dp"
+                android:layout_marginLeft="@dimen/margin_small" />
+
+
         </LinearLayout>
 
         <GridLayout
             android:id="@+id/activity_event_details_attending_list"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_width="wrap_content"
+            android:layout_height="77dp"
+            >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation = "vertical"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical|center_horizontal"
+
+                    >
+
+                </LinearLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="0"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/profile_man_1" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_row="0"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/profile_man_2" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_row="0"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/profile_man_4" />
+
+
+        </GridLayout>
+
+
+
+        <CheckBox
+            android:id="@+id/chip_online"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorPrimary"
+            android:layout_marginTop="@dimen/margin_tiny"
+            android:text="Visible to New People" />
+
 
     </LinearLayout>
 

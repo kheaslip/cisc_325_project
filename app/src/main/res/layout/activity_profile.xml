@@ -16,7 +16,7 @@
             android:id="@+id/button_home_screen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
+
             android:src="@drawable/baseline_home_black_24"
             android:clickable="true"
             android:focusable="true"
@@ -30,7 +30,7 @@
             android:id="@+id/button_profile_screen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
+
             android:src="@drawable/baseline_person_black_24"
             android:clickable="true"
             android:focusable="true"
