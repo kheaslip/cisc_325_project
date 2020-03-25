@@ -1,11 +1,15 @@
 package com.example.cisc_325_project;
 
 import androidx.appcompat.app.AppCompatActivity;
+import de.hdodenhof.circleimageview.CircleImageView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.GridLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -35,6 +39,21 @@ public class EventDetails extends AppCompatActivity {
         ((TextView)findViewById(R.id.activity_event_details_time)).setText("N/A");
         ((ImageView)findViewById(R.id.activity_event_details_image)).setImageResource(imageResource);
 
+
+        //GridLayout gridLayout =  ((GridLayout) findViewById(R.id.activity_event_details_attending_list));
+        LinearLayout gallery = findViewById(R.id.gallery);
+        LayoutInflater inflater = LayoutInflater.from(this);
+
+        //do a for loop for every person attending
+        for (int i = 0; i < attendees.size(); i++) {
+            View view=inflater.inflate(R.layout.people_attending, gallery, false);
+
+          // ImageView circleImageView =  ((ImageView) getLayoutInflater().inflate(R.layout.people_attending));
+           ImageView circleImageView =   view.findViewById(R.id.imageView);
+
+            circleImageView.setImageResource(attendees.get(i).getmResourceImage());
+            gallery.addView(view);
+        }
     }
 
     public void loadHomeScreen(View view) {

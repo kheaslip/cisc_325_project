@@ -32,6 +32,9 @@ public class Profile extends AppCompatActivity {
         startActivity(new Intent(Profile.this, statusSelectionActivity.class));
     }
 
+    public void loadLogin(View view) {
+        startActivity(new Intent(Profile.this, MainActivity.class));
+    }
     public void loadHomeScreen(View view) {
         startActivity(new Intent(Profile.this, Home.class));
     }
