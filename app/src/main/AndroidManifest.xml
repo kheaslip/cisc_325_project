@@ -34,14 +34,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Home" />
         </activity>
-        <activity
-            android:name=".EventDetails"
-            android:label="Event Details"
-            android:parentActivityName=".EventList">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".EventList" />
-        </activity>
+        <activity android:name=".EventDetails" />
         <activity
             android:name=".EventList"
             android:label="Events"
