@@ -33,190 +33,164 @@
             android:text="EventName"
             android:textSize="20dp" />
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="@dimen/margin_medium"
-            android:layout_marginTop="16dp"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Date:"
-                android:textSize="15dp"
-                android:layout_marginLeft="@dimen/margin_small"/>
-
-            <TextView
-                android:id="@+id/activity_event_details_date"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginRight="10dp"
-                android:text="Jan 1th, 2021"
-                android:textSize="15dp"
-                android:layout_marginLeft="@dimen/margin_small" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="@dimen/margin_medium">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Time:"
-                android:textSize="15dp"
-                android:layout_marginLeft="@dimen/margin_small" />
-
-            <TextView
-                android:id="@+id/activity_event_details_time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginRight="10dp"
-                android:text="Noon"
-                android:textSize="15dp"
-                android:layout_marginLeft="@dimen/margin_small" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="@dimen/margin_medium">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Place"
-                android:textSize="15dp"
-                android:layout_marginLeft="@dimen/margin_small" />
-
-            <TextView
-                android:id="@+id/activity_event_details_location"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Nowhere"
-                android:layout_marginRight="10dp"
-                android:textSize="15dp"
-                android:layout_marginLeft="@dimen/margin_small" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="@dimen/margin_medium">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Details"
-                android:textSize="15dp"
-                android:layout_marginLeft="@dimen/margin_small" />
-
-            <TextView
-                android:id="@+id/activity_event_details_details"
-                android:layout_width="296dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/margin_small"
-                android:layout_marginRight="10dp"
-                android:layout_weight="1"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                android:textSize="15dp" />
-
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="@dimen/margin_medium">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New People To Meet: "
-                android:textSize="15dp"
-                android:layout_marginRight="80dp"
-                android:layout_marginLeft="@dimen/margin_small" />
-
-
-        </LinearLayout>
-
-        <HorizontalScrollView
-
-            android:layout_width="393dp"
-            android:layout_height="100dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:scrollbars="none"
-
-            >
+            android:layout_height="wrap_content">
 
             <LinearLayout
-                android:id="@+id/gallery"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal" />
+                android:orientation="vertical">
 
-            <!--            android:id="@+id/activity_event_details_attending_list"-->
-            <!--                <LinearLayout-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="wrap_content"-->
-            <!--                    android:orientation = "vertical"-->
-            <!--                    android:gravity="center"-->
-            <!--                    android:layout_gravity="center_vertical|center_horizontal"-->
-            <!--                    >-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    android:layout_marginTop="16dp"
+                    >
 
-            <!--                </LinearLayout>-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date:"
+                        android:textSize="15dp"
+                        android:layout_marginLeft="@dimen/margin_small"/>
 
-            <!--            <de.hdodenhof.circleimageview.CircleImageView-->
-            <!--                android:id="@+id/activity_event_details_picture"-->
-            <!--                android:layout_width="60dp"-->
-            <!--                android:layout_height="match_parent"-->
-            <!--                android:layout_column="0"-->
-            <!--                android:layout_marginLeft="10dp"-->
-            <!--                android:layout_marginRight="10dp"-->
-            <!--                android:layout_row="0" />-->
+                    <TextView
+                        android:id="@+id/activity_event_details_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="10dp"
+                        android:text="Jan 1th, 2021"
+                        android:textSize="15dp"
+                        android:layout_marginLeft="@dimen/margin_small" />
+                </LinearLayout>
 
-            <!--            <de.hdodenhof.circleimageview.CircleImageView-->
-            <!--                android:layout_width="60dp"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:layout_column="1"-->
-            <!--                android:layout_row="0"-->
-            <!--                android:layout_marginRight="10dp"-->
-            <!--                android:layout_marginLeft="10dp"-->
-            <!--                android:src="@drawable/profile_man_2" />-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/margin_medium">
 
-            <!--            <de.hdodenhof.circleimageview.CircleImageView-->
-            <!--                android:layout_width="60dp"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:layout_column="2"-->
-            <!--                android:layout_row="0"-->
-            <!--                android:layout_marginRight="10dp"-->
-            <!--                android:layout_marginLeft="10dp"-->
-            <!--                android:src="@drawable/profile_man_4" />-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Time:"
+                        android:textSize="15dp"
+                        android:layout_marginLeft="@dimen/margin_small" />
+
+                    <TextView
+                        android:id="@+id/activity_event_details_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="10dp"
+                        android:text="Noon"
+                        android:textSize="15dp"
+                        android:layout_marginLeft="@dimen/margin_small" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/margin_medium">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Place"
+                        android:textSize="15dp"
+                        android:layout_marginLeft="@dimen/margin_small" />
+
+                    <TextView
+                        android:id="@+id/activity_event_details_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Nowhere"
+                        android:layout_marginRight="10dp"
+                        android:textSize="15dp"
+                        android:layout_marginLeft="@dimen/margin_small" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/margin_medium">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Details"
+                        android:textSize="15dp"
+                        android:layout_marginLeft="@dimen/margin_small" />
+
+                    <TextView
+                        android:id="@+id/activity_event_details_details"
+                        android:layout_width="296dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        android:textSize="15dp" />
 
 
-        </HorizontalScrollView>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/margin_medium">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="New People To Meet: "
+                        android:textSize="15dp"
+                        android:layout_marginRight="80dp"
+                        android:layout_marginLeft="@dimen/margin_small" />
+
+
+                </LinearLayout>
+
+                <HorizontalScrollView
+
+                    android:layout_width="393dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:scrollbars="none"
+
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/gallery"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal" />
+
+                </HorizontalScrollView>
 
 
 
-        <CheckBox
-            android:id="@+id/chip_online"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:buttonTint="@color/colorPrimary"
-            android:layout_marginTop="@dimen/margin_tiny"
-            android:text="Visible to New People" />
+                <CheckBox
+                    android:id="@+id/chip_online"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/colorPrimary"
+                    android:layout_marginTop="@dimen/margin_tiny"
+                    android:text="Visible to New People" />
+
+            </LinearLayout>
+
+        </ScrollView>
 
 
     </LinearLayout>
