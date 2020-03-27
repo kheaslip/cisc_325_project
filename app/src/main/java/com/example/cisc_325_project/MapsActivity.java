@@ -9,11 +9,13 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -72,7 +74,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     LatLng pos = new LatLng(lat, lng);
 
                     builder.include(pos);
-                    mMap.addMarker(new MarkerOptions().position(pos).title(p.getmName()));
+                    mMap.addMarker(new MarkerOptions()
+                        .position(pos)
+                        .title(p.getmName())
+                        .snippet(p.getmStatus())
+                        .icon(BitmapDescriptorFactory.defaultMarker(new Random().nextInt(360)))
+                    );
                 }
                 LatLngBounds bounds = builder.build();
                 mMap.moveCamera(CameraUpdateFactory.newLatLngBounds(bounds,padding)); // 16dp padding
