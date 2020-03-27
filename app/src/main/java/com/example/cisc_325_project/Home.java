@@ -90,4 +90,7 @@ public class Home extends AppCompatActivity {
         startActivity(new Intent(Home.this, Profile.class));
     }
 
+    public void loadMapScreen(View view) {
+        startActivity(new Intent(Home.this, MapsActivity.class));
+    }
 }
