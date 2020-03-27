@@ -2,6 +2,7 @@ package com.example.cisc_325_project;
 
 import androidx.fragment.app.FragmentActivity;
 
+import android.content.Context;
 import android.content.res.Resources;
 import android.os.Bundle;
 
@@ -12,6 +13,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.ArrayList;
@@ -20,12 +22,14 @@ import java.util.Random;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+    private Context mContext;
 
     private final ArrayList<Person> people = new ArrayList<Person>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_maps);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -59,27 +63,41 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
 
-        final GoogleMap gm = googleMap;
+        final GoogleMap mGoogleMap = googleMap;
+        mContext = this;
+
         googleMap.setOnMapLoadedCallback(new GoogleMap.OnMapLoadedCallback() {
             @Override
             public void onMapLoaded() {
-                mMap = gm;
+
+                mMap = mGoogleMap;
+
                 // units dp to px
                 int padding = (int) (16 * Resources.getSystem().getDisplayMetrics().density);
                 double lat, lng;
+                Marker marker;
                 LatLngBounds.Builder builder = new LatLngBounds.Builder();
+
+                // for each person, given them their own pin on the map
                 for (Person p : people) {
                     lat = p.getMlocationLat();
                     lng = p.getMlocationLng();
                     LatLng pos = new LatLng(lat, lng);
 
                     builder.include(pos);
-                    mMap.addMarker(new MarkerOptions()
+                    marker = mMap.addMarker(new MarkerOptions()
                         .position(pos)
-                        .title(p.getmName())
-                        .snippet(p.getmStatus())
                         .icon(BitmapDescriptorFactory.defaultMarker(new Random().nextInt(360)))
+
                     );
+
+                    mGoogleMap.setInfoWindowAdapter(
+                            new CustomGoogleMapInfoWindowPerson(mContext));
+
+                    marker.setTag(new InfoWindowDataPerson(
+                            p.getmResourceImage(),p.getmName(),p.getmStatus())
+                    );
+
                 }
                 LatLngBounds bounds = builder.build();
                 mMap.moveCamera(CameraUpdateFactory.newLatLngBounds(bounds,padding)); // 16dp padding
