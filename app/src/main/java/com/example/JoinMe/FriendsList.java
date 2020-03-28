@@ -1,4 +1,4 @@
-package com.example.cisc_325_project;
+package com.example.JoinMe;
 
 
 import android.content.Intent;
@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+
+import com.example.cisc_325_project.R;
 
 import java.util.ArrayList;
 
@@ -32,7 +34,7 @@ public class FriendsList extends Fragment {
 
         final ArrayList<Person> people = new ArrayList<Person>();
 
-        people.add(new Person("Sasha Beltran", R.drawable.profile_woman_1, "At the gym"));
+        people.add(new Person("Sasha Beltran", R.drawable.profile_woman_1, "Going for a walk"));
         people.add(new Person("Harmony Bennett", R.drawable.profile_woman_2, "Studying"));
         people.add(new Person("Tori Mcbride", R.drawable.profile_woman_3, "At the dinning hall"));
         people.add(new Person("Saniya Hodson", R.drawable.profile_woman_4, "Playing basketball"));

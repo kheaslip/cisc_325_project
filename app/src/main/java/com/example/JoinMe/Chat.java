@@ -1,4 +1,4 @@
-package com.example.cisc_325_project;
+package com.example.JoinMe;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.example.cisc_325_project.R;
 
 public class Chat extends AppCompatActivity {
 

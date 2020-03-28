@@ -1,7 +1,6 @@
-package com.example.cisc_325_project;
+package com.example.JoinMe;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,6 +14,8 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+
+import com.example.cisc_325_project.R;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -48,15 +49,14 @@ public class EventList extends Fragment {
             final ArrayList<EventItem> events = new ArrayList<EventItem>();
             final ArrayList<Person> people = new ArrayList<Person>();
 
-            people.add(new Person("Sasha Beltran", R.drawable.profile_woman_1, "At the gym"));
-            people.add(new Person("Harmony Bennett", R.drawable.profile_woman_2, "Studying"));
-            people.add(new Person("Tori Mcbride", R.drawable.profile_woman_3, "At the dinning hall"));
-            people.add(new Person("Saniya Hodson", R.drawable.profile_woman_4, "Playing basketball"));
-
-            people.add(new Person("Colin Woodard",R.drawable.profile_man_1,"At the dinning hall"));
-            people.add(new Person("Mikhail Sanderson",R.drawable.profile_man_2,"Studying"));
-            people.add(new Person("Blessing Baldwin",R.drawable.profile_man_3,"At conference"));
-            people.add(new Person("Zacharias Phelps",R.drawable.profile_man_4,"Playing Go"));
+            people.add(new Person("Charlie Jum", R.drawable.profile_woman_5, "At the gym"));
+            people.add(new Person("Alexa Vian", R.drawable.profile_woman_6, "Studying"));
+            people.add(new Person("Peter Pawm", R.drawable.profile_man_7, "At the dinning hall"));
+            people.add(new Person("Soni Iman", R.drawable.profile_man_8, "Playing basketball"));
+            people.add(new Person("Chris Pomlan",R.drawable.profile_man_9,"At the dinning hall"));
+            people.add(new Person("Micheal Port",R.drawable.profile_man_6,"Studying"));
+            people.add(new Person("Bob Marlawn",R.drawable.profile_man_10,"At conference"));
+            people.add(new Person("Zoe Chres",R.drawable.profile_woman_7,"Playing Go"));
 
             events.add(new EventItem("Canada Day Firework Show",
                     new Date(2020, 6, 1, 21,0,0),

@@ -1,4 +1,4 @@
-package com.example.cisc_325_project;
+package com.example.JoinMe;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;

@@ -1,10 +1,12 @@
-package com.example.cisc_325_project;
+package com.example.JoinMe;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
+import com.example.cisc_325_project.R;
 
 public class CreateEvent extends AppCompatActivity {
 

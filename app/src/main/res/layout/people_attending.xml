@@ -14,5 +14,6 @@
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageView"
         android:layout_width="60dp"
+        android:onClick="loadChat"
         android:layout_height="60dp" />
 </LinearLayout>

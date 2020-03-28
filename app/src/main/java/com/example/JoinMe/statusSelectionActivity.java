@@ -1,14 +1,16 @@
-package com.example.cisc_325_project;
+package com.example.JoinMe;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.example.cisc_325_project.R;
 
 public class statusSelectionActivity extends AppCompatActivity {
 
@@ -56,5 +58,6 @@ public class statusSelectionActivity extends AppCompatActivity {
         String newStatus = ((TextView)findViewById(R.id.change_status)).getText().toString();
         Home.setmStatus(newStatus);
         findViewById(R.id.confirm_status_button).setVisibility(View.GONE);
+        startActivity(new Intent(statusSelectionActivity.this, Home.class));
     }
 }

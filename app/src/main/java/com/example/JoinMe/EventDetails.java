@@ -1,16 +1,16 @@
-package com.example.cisc_325_project;
+package com.example.JoinMe;
 
 import androidx.appcompat.app.AppCompatActivity;
-import de.hdodenhof.circleimageview.CircleImageView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.example.cisc_325_project.R;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -18,7 +18,7 @@ import java.util.Date;
 public class EventDetails extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_details);
 
@@ -54,6 +54,14 @@ public class EventDetails extends AppCompatActivity {
             circleImageView.setImageResource(attendees.get(i).getmResourceImage());
             gallery.addView(view);
         }
+
+
+
+
+    }
+
+    public void loadChat(View view) {
+        startActivity(new Intent(EventDetails.this, Chat.class));
     }
 
     public void loadHomeScreen(View view) {
