@@ -17,6 +17,7 @@ package com.example.cisc_325_project;
 *
 * */
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.content.Context;
@@ -25,7 +26,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.fragment.app.FragmentActivity;
 
@@ -103,7 +103,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             @Override
             protected void onClickConfirmed(View v, Marker marker) {
 
-                Toast.makeText(MapsActivity.this, marker.getTitle() + "'s button clicked!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(mContext, Chat.class);
+
+                InfoWindowDataPerson person = (InfoWindowDataPerson) marker.getTag();
+
+                intent.putExtra("name", person.getmName());
+                intent.putExtra("image", person.getmImageResourceID());
+                intent.putExtra("status", person.getmStatus());
+
+                startActivity(intent);
             }
         };
         this.mInfoButton.setOnTouchListener(mInfoButtonListener);
