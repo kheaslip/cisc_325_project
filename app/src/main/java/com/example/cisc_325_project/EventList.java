@@ -1,4 +1,4 @@
-package com.example.JoinMe;
+package com.example.cisc_325_project;
 
 import androidx.annotation.Nullable;
 
@@ -14,8 +14,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
-
-import com.example.cisc_325_project.R;
 
 import java.util.ArrayList;
 import java.util.Arrays;

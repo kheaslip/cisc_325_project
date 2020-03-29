@@ -1,4 +1,4 @@
-package com.example.JoinMe;
+package com.example.cisc_325_project;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.cisc_325_project.R;
 import com.google.android.material.tabs.TabLayout;
 
 public class Home extends AppCompatActivity {

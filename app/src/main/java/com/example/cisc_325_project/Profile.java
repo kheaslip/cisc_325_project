@@ -1,4 +1,4 @@
-package com.example.JoinMe;
+package com.example.cisc_325_project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,8 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
-import com.example.cisc_325_project.R;
 
 public class Profile extends AppCompatActivity {
 

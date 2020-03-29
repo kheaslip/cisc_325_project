@@ -1,10 +1,8 @@
-package com.example.JoinMe;
+package com.example.cisc_325_project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-
-import com.example.cisc_325_project.R;
 
 public class AddContact extends AppCompatActivity {
 

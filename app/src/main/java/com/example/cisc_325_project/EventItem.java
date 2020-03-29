@@ -1,4 +1,4 @@
-package com.example.JoinMe;
+package com.example.cisc_325_project;
 
 import java.util.ArrayList;
 import java.util.Date;

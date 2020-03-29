@@ -9,54 +9,54 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.JoinMe.AddContact"></activity>
-        <activity android:name="com.example.JoinMe.MainActivity">
+        <activity android:name=".AddContact"></activity>
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.JoinMe.Chat" />
+        <activity android:name=".Chat" />
         <activity
-            android:name="com.example.JoinMe.CreateEvent"
+            android:name=".CreateEvent"
             android:label="Create Event"
-            android:parentActivityName="com.example.JoinMe.EventList">
+            android:parentActivityName=".EventList">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.JoinMe.EventList" />
+                android:value=".EventList" />
         </activity>
         <activity
-            android:name="com.example.JoinMe.Profile"
+            android:name=".Profile"
             android:label="Profile"
-            android:parentActivityName="com.example.JoinMe.Home">
+            android:parentActivityName=".Home">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.JoinMe.Home" />
+                android:value=".Home" />
         </activity>
-        <activity android:name="com.example.JoinMe.EventDetails" />
+        <activity android:name=".EventDetails" />
         <activity
-            android:name="com.example.JoinMe.EventList"
+            android:name=".EventList"
             android:label="Events"
-            android:parentActivityName="com.example.JoinMe.Home">
+            android:parentActivityName=".Home">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.JoinMe.Home" />
+                android:value=".Home" />
         </activity>
         <activity
-            android:name="com.example.JoinMe.statusSelectionActivity"
+            android:name=".statusSelectionActivity"
             android:label="Status"
-            android:parentActivityName="com.example.JoinMe.Home">
+            android:parentActivityName=".Home">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.JoinMe.Home" />
+                android:value=".Home" />
         </activity>
         <activity
-            android:name="com.example.JoinMe.Home"
-            android:parentActivityName="com.example.JoinMe.MainActivity">
+            android:name=".Home"
+            android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.JoinMe.MainActivity" />
+                android:value=".MainActivity" />
         </activity>
     </application>
 

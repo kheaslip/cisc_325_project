@@ -1,4 +1,4 @@
-package com.example.JoinMe;
+package com.example.cisc_325_project;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,48 +8,46 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.cisc_325_project.R;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
-public class FriendsAdapter extends ArrayAdapter<Person> {
+public class EventAdapter extends ArrayAdapter<EventItem> {
 
-    public FriendsAdapter(Context context, ArrayList<Person> people) {
-        super(context, 0, people);
+    public EventAdapter(Context context, ArrayList<EventItem> events) {
+        super(context, 0, events);
     }
 
-    // Generates the list item for the friends list as the user scrolls
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View listItem = convertView;
         if (listItem == null) {
             listItem = LayoutInflater.from(getContext()).inflate(
-                    R.layout.friend_item, parent, false);
+                    R.layout.event_list_item, parent, false);
         }
 
-        Person person = getItem(position);
+        EventItem eventItem = getItem(position);
 
         // set the status and name of the person for the textView
-        TextView textView = (TextView) listItem.findViewById(R.id.status);
-        textView.setText(person.getmStatus());
+        TextView textView = (TextView) listItem.findViewById(R.id.event_list_item_name);
+        textView.setText(eventItem.getmName());
 
-        textView = (TextView) listItem.findViewById(R.id.name);
-        textView.setText(person.getmName());
+        textView = (TextView) listItem.findViewById(R.id.event_list_item_details);
+        textView.setText(eventItem.getmDetails());
 
         // set the profile picture of the person
-        ImageView imageView = (ImageView) listItem.findViewById(R.id.image);
-        if (person.hasImage()) {
-            imageView.setImageResource(person.getmResourceImage());
+        ImageView imageView = (ImageView) listItem.findViewById(R.id.event_list_item_image);
+        if (eventItem.hasImage()) {
+            imageView.setImageResource(eventItem.getmImageResource());
             imageView.setVisibility(View.VISIBLE);
         } else {
             imageView.setVisibility(View.GONE);
         }
 
-        return listItem;
+        // TODO: add attendee list
 
+        return listItem;
     }
 }
