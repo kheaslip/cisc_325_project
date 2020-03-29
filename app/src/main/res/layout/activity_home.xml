@@ -41,6 +41,13 @@
             android:layout_marginTop="@dimen/margin_small"
             android:textColor="@android:color/white" />
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="map"
+            android:id="@+id/button_home_map"
+            android:onClick="loadMapScreen"/>
+
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"

@@ -7,11 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.google.android.material.tabs.TabLayout;
-
-import org.w3c.dom.Text;
 
 public class Home extends AppCompatActivity {
 
@@ -42,7 +39,7 @@ public class Home extends AppCompatActivity {
        // tabLayout.addTab(tabLayout.newTab().setText("New"));
         tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label_friends_list));
         tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label_events));
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label_map));
+
 
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
@@ -89,5 +86,9 @@ public class Home extends AppCompatActivity {
 
     public void loadProfileScreen(View view) {
         startActivity(new Intent(Home.this, Profile.class));
+    }
+
+    public void loadMapScreen(View view) {
+        startActivity(new Intent(Home.this, MapsActivity.class));
     }
 }
