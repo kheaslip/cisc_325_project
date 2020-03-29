@@ -5,4 +5,5 @@
     <dimen name="margin_medium">16dp</dimen>
     <dimen name="margin_large">24dp</dimen>
     <dimen name="list_item_profile_image_size">64dp</dimen>
+    <dimen name="min_button_size">48dp</dimen>
 </resources>

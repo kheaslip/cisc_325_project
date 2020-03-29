@@ -19,13 +19,16 @@
             android:layout_marginLeft="@dimen/margin_medium"
             android:layout_marginTop="@dimen/margin_medium"/>
 
-        <Button
+        <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/margin_medium"
             android:layout_marginTop="@dimen/margin_medium"
             android:id="@+id/info_window_button_chat"
-            android:text="Message"/>
+            android:src="@drawable/baseline_chat_bubble_outline_black_24"
+            android:background="#fff"
+            android:minWidth="@dimen/min_button_size"
+            android:minHeight="@dimen/min_button_size"/>
 
     </LinearLayout>
 

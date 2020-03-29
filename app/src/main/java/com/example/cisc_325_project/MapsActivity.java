@@ -23,7 +23,7 @@ import android.os.Bundle;
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -51,7 +51,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private ImageView mInfoImage;
     private TextView mInfoTitle;
     private TextView mInfoSnippet;
-    private Button mInfoButton;
+    private ImageButton mInfoChatButton;
     private OnInfoWindowElemTouchListener mInfoButtonListener;
 
     private final ArrayList<Person> mPeople = new ArrayList<Person>();
@@ -94,11 +94,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         this.mInfoWindow = (ViewGroup)getLayoutInflater().inflate(R.layout.maps_info_window_person, null);
         this.mInfoTitle = (TextView) mInfoWindow.findViewById(R.id.info_window_person_name);
         this.mInfoSnippet = (TextView) mInfoWindow.findViewById(R.id.info_window_person_status);
-        this.mInfoButton = (Button) mInfoWindow.findViewById(R.id.info_window_button_chat);
+        this.mInfoChatButton = (ImageButton) mInfoWindow.findViewById(R.id.info_window_button_chat);
         this.mInfoImage = (ImageView) mInfoWindow.findViewById(R.id.info_window_person_image);
 
         // set OnTouchListener that handles the checking for what was pressed
-        this.mInfoButtonListener = new OnInfoWindowElemTouchListener(mInfoButton)
+        this.mInfoButtonListener = new OnInfoWindowElemTouchListener(mInfoChatButton)
         {
             @Override
             protected void onClickConfirmed(View v, Marker marker) {
@@ -114,7 +114,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 startActivity(intent);
             }
         };
-        this.mInfoButton.setOnTouchListener(mInfoButtonListener);
+        this.mInfoChatButton.setOnTouchListener(mInfoButtonListener);
 
 
         // define how the infoWindow is populated
