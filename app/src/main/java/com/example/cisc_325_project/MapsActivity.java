@@ -98,9 +98,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         this.mInfoImage = (ImageView) mInfoWindow.findViewById(R.id.info_window_person_image);
 
         // set OnTouchListener that handles the checking for what was pressed
-        this.mInfoButtonListener = new OnInfoWindowElemTouchListener(mInfoButton,
-                getResources().getDrawable(R.drawable.common_google_signin_btn_icon_light_normal),
-                getResources().getDrawable(R.drawable.common_google_signin_btn_icon_light_focused))
+        this.mInfoButtonListener = new OnInfoWindowElemTouchListener(mInfoButton)
         {
             @Override
             protected void onClickConfirmed(View v, Marker marker) {

@@ -30,17 +30,13 @@ import com.google.android.gms.maps.model.Marker;
 public abstract class OnInfoWindowElemTouchListener implements View.OnTouchListener {
 
     private final View mView;
-    private final Drawable mDrawableNormal;
-    private final Drawable mDrawablePressed;
     private final Handler mHandler = new Handler();
 
     private Marker mMarker;
     private boolean mPressed = false;
 
-    public OnInfoWindowElemTouchListener(View view, Drawable drawableNormal, Drawable drawablePressed) {
+    public OnInfoWindowElemTouchListener(View view) {
         this.mView = view;
-        this.mDrawableNormal = drawableNormal;
-        this.mDrawablePressed = drawablePressed;
     }
 
     public void setMarker(Marker marker) {
@@ -76,7 +72,6 @@ public abstract class OnInfoWindowElemTouchListener implements View.OnTouchListe
         if (!mPressed) {
             mPressed = true;
             mHandler.removeCallbacks(confirmClickRunable);
-            mView.setBackground(mDrawablePressed);
             if (mMarker != null) {
                 mMarker.showInfoWindow();
             }
@@ -87,7 +82,6 @@ public abstract class OnInfoWindowElemTouchListener implements View.OnTouchListe
         if (mPressed) {
             this.mPressed = false;
             mHandler.removeCallbacks(confirmClickRunable);
-            mView.setBackground(mDrawableNormal);
             if (mMarker != null) {
                 mMarker.showInfoWindow();
             }
