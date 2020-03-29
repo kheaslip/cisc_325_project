@@ -28,7 +28,7 @@ public class EventDetails extends AppCompatActivity {
         String location = intent.getStringExtra("location");;
         String details = intent.getStringExtra("details");;
         int imageResource = intent.getIntExtra("image", 0);
-        ArrayList<Person> attendees = (ArrayList<Person>) intent.getSerializableExtra("attendees");
+        final ArrayList<Person> attendees = (ArrayList<Person>) intent.getSerializableExtra("attendees");
 
         ((TextView)findViewById(R.id.activity_event_details_name)).setText(name);
         ((TextView)findViewById(R.id.activity_event_details_date)).setText(startDate.toString()+ " - " + endDate.toString());
@@ -44,12 +44,25 @@ public class EventDetails extends AppCompatActivity {
 
         //do a for loop for every person attending
         for (int i = 0; i < attendees.size(); i++) {
-            View view=inflater.inflate(R.layout.people_attending, gallery, false);
+            View view = inflater.inflate(R.layout.people_attending, gallery, false);
 
-          // ImageView circleImageView =  ((ImageView) getLayoutInflater().inflate(R.layout.people_attending));
-           ImageView circleImageView =   view.findViewById(R.id.imageView);
+            // ImageView circleImageView = ((ImageView) getLayoutInflater().inflate(R.layout.people_attending));
+            ImageView circleImageView = view.findViewById(R.id.imageView);
+            final Person person = attendees.get(i);
 
-            circleImageView.setImageResource(attendees.get(i).getmResourceImage());
+            circleImageView.setImageResource(person.getmResourceImage());
+            circleImageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(EventDetails.this, Chat.class);
+
+                    intent.putExtra("name", person.getmName());
+                    intent.putExtra("image", person.getmResourceImage());
+                    intent.putExtra("status", person.getmStatus());
+
+                    startActivity(intent);
+                }
+            });
             gallery.addView(view);
         }
 
