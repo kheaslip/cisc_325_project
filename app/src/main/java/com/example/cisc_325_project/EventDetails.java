@@ -1,13 +1,11 @@
 package com.example.cisc_325_project;
 
 import androidx.appcompat.app.AppCompatActivity;
-import de.hdodenhof.circleimageview.CircleImageView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -18,7 +16,7 @@ import java.util.Date;
 public class EventDetails extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_details);
 
@@ -30,7 +28,7 @@ public class EventDetails extends AppCompatActivity {
         String location = intent.getStringExtra("location");;
         String details = intent.getStringExtra("details");;
         int imageResource = intent.getIntExtra("image", 0);
-        ArrayList<Person> attendees = (ArrayList<Person>) intent.getSerializableExtra("attendees");
+        final ArrayList<Person> attendees = (ArrayList<Person>) intent.getSerializableExtra("attendees");
 
         ((TextView)findViewById(R.id.activity_event_details_name)).setText(name);
         ((TextView)findViewById(R.id.activity_event_details_date)).setText(startDate.toString()+ " - " + endDate.toString());
@@ -46,14 +44,35 @@ public class EventDetails extends AppCompatActivity {
 
         //do a for loop for every person attending
         for (int i = 0; i < attendees.size(); i++) {
-            View view=inflater.inflate(R.layout.people_attending, gallery, false);
+            View view = inflater.inflate(R.layout.people_attending, gallery, false);
 
-          // ImageView circleImageView =  ((ImageView) getLayoutInflater().inflate(R.layout.people_attending));
-           ImageView circleImageView =   view.findViewById(R.id.imageView);
+            // ImageView circleImageView = ((ImageView) getLayoutInflater().inflate(R.layout.people_attending));
+            ImageView circleImageView = view.findViewById(R.id.imageView);
+            final Person person = attendees.get(i);
 
-            circleImageView.setImageResource(attendees.get(i).getmResourceImage());
+            circleImageView.setImageResource(person.getmResourceImage());
+            circleImageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(EventDetails.this, Chat.class);
+
+                    intent.putExtra("name", person.getmName());
+                    intent.putExtra("image", person.getmResourceImage());
+                    intent.putExtra("status", person.getmStatus());
+
+                    startActivity(intent);
+                }
+            });
             gallery.addView(view);
         }
+
+
+
+
+    }
+
+    public void loadChat(View view) {
+        startActivity(new Intent(EventDetails.this, Chat.class));
     }
 
     public void loadHomeScreen(View view) {
