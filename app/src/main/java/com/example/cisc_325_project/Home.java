@@ -36,13 +36,10 @@ public class Home extends AppCompatActivity {
         TabLayout tabLayout = findViewById(R.id.home_screen_tab_bar);
 
         // give the home screen tabs labels
-       // tabLayout.addTab(tabLayout.newTab().setText("New"));
         tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label_friends_list));
         tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label_events));
 
-
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
-
 
         final ViewPager viewPager =findViewById(R.id.home_pager);
         final PageAdapter pageAdapter = new PageAdapter(
