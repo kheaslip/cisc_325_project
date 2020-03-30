@@ -21,8 +21,6 @@ public class FriendsAdapter extends ArrayAdapter<Person> {
         super(context, 0, people);
     }
 
-
-
     // Generates the list item for the friends list as the user scrolls
     @NonNull
     @Override
@@ -52,8 +50,6 @@ public class FriendsAdapter extends ArrayAdapter<Person> {
         }
 
         return listItem;
-
-
     }
 
 }

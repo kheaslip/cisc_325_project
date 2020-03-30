@@ -45,8 +45,6 @@ public class Home extends AppCompatActivity {
         final PageAdapter pageAdapter = new PageAdapter(
                 getSupportFragmentManager(), tabLayout.getTabCount());
 
-
-
         // setup the parts to handle the detecting and changing of home tabs
         viewPager.setAdapter(pageAdapter);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
