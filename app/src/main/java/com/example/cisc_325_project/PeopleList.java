@@ -96,7 +96,7 @@ public class PeopleList {
     }
 
     /**
-     * Pops the first element of the ArrayList of stranglers that matches the given name
+     * Pops the first element of the ArrayList of strangers that matches the given name
      * @param name the name of the person
      * @return the first Person object with the matching name, or null if none found.
      */

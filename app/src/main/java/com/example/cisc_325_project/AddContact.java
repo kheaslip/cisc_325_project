@@ -2,6 +2,7 @@ package com.example.cisc_325_project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -33,6 +34,7 @@ public class AddContact extends AppCompatActivity {
             ((EditText) findViewById(R.id.editText)).setText("");
             ((EditText) findViewById(R.id.editText2)).setText("");
         }
+        startActivity(new Intent(AddContact.this, Home.class));
     }
 
 }

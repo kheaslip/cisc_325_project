@@ -26,19 +26,6 @@
             android:layout_marginTop="@dimen/margin_small"
             android:textColor="@android:color/white" />
 
-        <ImageView
-            android:id="@+id/button_profile_screen"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:src="@drawable/baseline_person_black_24"
-            android:clickable="true"
-            android:focusable="true"
-            android:contentDescription="profile button"
-            android:layout_marginLeft="@dimen/margin_small"
-            android:layout_marginTop="@dimen/margin_small"
-            android:textColor="@android:color/white" />
-
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
