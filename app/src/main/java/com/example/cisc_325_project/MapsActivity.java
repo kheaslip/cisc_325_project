@@ -66,17 +66,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mapFragment.getMapAsync(this);
 
         // the people on the map
-        {
-            mPeople.add(new Person("Sasha Beltran", R.drawable.profile_woman_1, "At the gym",44.229444, -76.494350));
-            mPeople.add(new Person("Harmony Bennett", R.drawable.profile_woman_2, "Studying",44.225361, -76.498782));
-            mPeople.add(new Person("Tori Mcbride", R.drawable.profile_woman_3, "At the dinning hall", 44.224681, -76.496035));
-            mPeople.add(new Person("Saniya Hodson", R.drawable.profile_woman_4, "Playing basketball", 44.229316, -76.494139));
-
-            mPeople.add(new Person("Colin Woodard",R.drawable.profile_man_1,"At the dinning hall",44.224096, -76.500638));
-            mPeople.add(new Person("Mikhail Sanderson",R.drawable.profile_man_2,"Studying",44.227311, -76.495121));
-            mPeople.add(new Person("Blessing Baldwin",R.drawable.profile_man_3,"At conference",44.218255, -76.517759));
-            mPeople.add(new Person("Zacharias Phelps",R.drawable.profile_man_4,"Playing Go",44.194878, -76.438305));
-        }
+        mPeople.addAll(PeopleList.getFriends());
 
     }
 

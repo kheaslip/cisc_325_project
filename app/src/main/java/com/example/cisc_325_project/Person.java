@@ -1,5 +1,7 @@
 package com.example.cisc_325_project;
 
+import androidx.annotation.NonNull;
+
 import java.io.Serializable;
 
 public class Person implements Serializable {
@@ -44,5 +46,11 @@ public class Person implements Serializable {
 
     public double getMlocationLng() {
         return mlocationLng;
+    }
+
+    @NonNull
+    @Override
+    protected Object clone() {
+        return new Person(mName, mResourceImage, mStatus, mlocationLat, mlocationLng);
     }
 }

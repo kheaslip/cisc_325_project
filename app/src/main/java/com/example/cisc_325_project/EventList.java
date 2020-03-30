@@ -45,16 +45,7 @@ public class EventList extends Fragment {
         // setup list of events
         {
             final ArrayList<EventItem> events = new ArrayList<EventItem>();
-            final ArrayList<Person> people = new ArrayList<Person>();
-
-            people.add(new Person("Charlie Jum", R.drawable.profile_woman_5, "At the gym"));
-            people.add(new Person("Alexa Vian", R.drawable.profile_woman_6, "Studying"));
-            people.add(new Person("Peter Pawm", R.drawable.profile_man_7, "At the dinning hall"));
-            people.add(new Person("Soni Iman", R.drawable.profile_man_8, "Playing basketball"));
-            people.add(new Person("Chris Pomlan",R.drawable.profile_man_9,"At the dinning hall"));
-            people.add(new Person("Micheal Port",R.drawable.profile_man_6,"Studying"));
-            people.add(new Person("Bob Marlawn",R.drawable.profile_man_10,"At conference"));
-            people.add(new Person("Zoe Chres",R.drawable.profile_woman_7,"Playing Go"));
+            final ArrayList<Person> people = PeopleList.getStrangers();
 
             events.add(new EventItem("Canada Day Firework Show",
                     new Date(2020, 6, 1, 21,0,0),
