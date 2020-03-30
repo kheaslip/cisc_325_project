@@ -30,6 +30,8 @@ public class AddContact extends AppCompatActivity {
         String name = getName();
         if (name != null && !name.equals("")) {
             PeopleList.addFriend(name);
+            ((EditText) findViewById(R.id.editText)).setText("");
+            ((EditText) findViewById(R.id.editText2)).setText("");
         }
     }
 
