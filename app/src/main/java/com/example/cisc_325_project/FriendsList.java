@@ -61,14 +61,9 @@ public class FriendsList extends Fragment {
         return rootView;
     }
 
-    public void addFriend (String Name, int image, String status){
-           mPeople.add(new Person(Name, image, status));
-    }
-
-    //once AddContact calls this class, the adapter will be notified that there is new person
-    //and should show that person
-    public void notifyAdapter () {
+    @Override
+    public void onResume() {
+        super.onResume();
         mFriendsAdapter.notifyDataSetChanged();
-
     }
 }

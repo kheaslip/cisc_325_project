@@ -124,15 +124,11 @@ public class PeopleList {
     }
 
     /**
-     * Returns a copy of the list of friends
-     * @return a copy of the list of friends
+     * Returns a reference to the list of friends
+     * @return a reference to the list of friends
      */
     static public ArrayList<Person> getFriends() {
-        ArrayList<Person> people = new ArrayList<>(mExisitingFriends.size());
-        for (Person p: mExisitingFriends) {
-            people.add((Person) p.clone());
-        }
-        return people;
+        return mExisitingFriends;
     }
 
     /**
@@ -140,10 +136,6 @@ public class PeopleList {
      * @return a copy of the list of strangers
      */
     static public ArrayList<Person> getStrangers() {
-        ArrayList<Person> people = new ArrayList<>(mStrangers.size());
-        for (Person p: mStrangers) {
-            people.add((Person) p.clone());
-        }
-        return people;
+        return mStrangers;
     }
 }
