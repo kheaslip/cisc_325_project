@@ -30,15 +30,18 @@
             android:layout_marginTop="@dimen/margin_small"
             android:textColor="@android:color/white" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="map"
+        <ImageView
             android:id="@+id/button_home_map"
-            android:onClick="loadMapScreen"/>
+            android:layout_width="26dp"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:layout_marginLeft="5dp"
+
+            android:onClick="loadMapScreen"
+            android:src="@drawable/world_financial" />
 
         <RelativeLayout
-            android:layout_width="0dp"
+            android:layout_width="43dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="horizontal">
@@ -47,10 +50,10 @@
                 android:id="@+id/chip_online"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/colorPrimary"
                 android:layout_alignParentRight="true"
-                android:layout_marginTop="@dimen/margin_tiny"
                 android:layout_marginRight="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_tiny"
+                android:buttonTint="@color/colorPrimary"
                 android:text="Offline" />
 
         </RelativeLayout>

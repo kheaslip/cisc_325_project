@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,8 +17,11 @@ import java.util.ArrayList;
 public class FriendsAdapter extends ArrayAdapter<Person> {
 
     public FriendsAdapter(Context context, ArrayList<Person> people) {
+
         super(context, 0, people);
     }
+
+
 
     // Generates the list item for the friends list as the user scrolls
     @NonNull
@@ -49,5 +53,7 @@ public class FriendsAdapter extends ArrayAdapter<Person> {
 
         return listItem;
 
+
     }
+
 }

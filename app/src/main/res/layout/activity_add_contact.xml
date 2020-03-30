@@ -40,6 +40,7 @@
         android:layout_marginTop="@dimen/margin_medium"
         android:background="@drawable/blue_rounded_button"
         android:text="Add"
+        android:onClick="createFriendButton"
         android:textColor="@android:color/white" />
 
 </LinearLayout>
