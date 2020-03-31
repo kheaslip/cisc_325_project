@@ -15,9 +15,10 @@
         <EditText
             android:id="@+id/change_status"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="@string/initial_default_status" />
+            android:layout_weight="1"
+            android:hint="I am doing"
+             />
 
         <Button
             android:id="@+id/confirm_status_button"
@@ -85,32 +86,18 @@
                 style="@style/StatusList"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="I'm unavailable"
+                android:text="I'm unavailable for a while"
                 android:onClick="replaceStatusText" />
+
+
+
+
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/add_new_preset_status"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="Type to add a new preset" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/blue_rounded_button"
-                style="?android:attr/borderlessButtonStyle"
-                android:textColor="@android:color/white"
-                android:text="Add" />
-        </LinearLayout>
+            android:orientation="horizontal"/>
 
     </LinearLayout>
 
