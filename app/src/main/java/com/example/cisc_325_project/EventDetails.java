@@ -3,9 +3,12 @@ package com.example.cisc_325_project;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -66,7 +69,29 @@ public class EventDetails extends AppCompatActivity {
             gallery.addView(view);
         }
 
+//
+      CheckBox checkBox1 = (CheckBox) findViewById(R.id.chip_online);
+////        boolean checked = PreferenceManager.getDefaultSharedPreferences(this)
+////                .getBoolean("checkBox1", false);
+//        if (checkBox1.isChecked() == true) {
+//            EventItem.stayVisible(true);
+//        }
+//
+//        if ( EventItem.getChecked() == true) {
+//            checkBox1.setChecked(true);
+//        }
 
+//        // Init
+//        SharedPreferences settings = getSharedPreferences("mysettings", 0);
+//        SharedPreferences.Editor editor = settings.edit();
+//
+//        // Save
+//        boolean checkBoxValue = checkBox1.isChecked();
+//        editor.putBoolean("checkBox1", checkBoxValue);
+//        editor.commit();;
+//
+//        // Load
+//        checkBox1.setChecked(settings.getBoolean("checkBox1", false));
 
 
     }

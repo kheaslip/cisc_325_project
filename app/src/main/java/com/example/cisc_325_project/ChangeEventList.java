@@ -7,7 +7,8 @@ import java.util.Date;
 public class ChangeEventList {
 
 
-    static private ArrayList<EventItem> events = new ArrayList<EventItem>();
+    static public ArrayList<EventItem> events = new ArrayList<EventItem>();
+
     static private ArrayList<Person> people = PeopleList.getStrangers();
 
     //add the events
@@ -22,6 +23,7 @@ public class ChangeEventList {
                         people.get(0), people.get(1), people.get(2), people.get(3)
                 ))));
 
+
         events.add(new EventItem("Local band tour",
                 new Date(2020, 3, 21, 20,0,0),
                 new Date(2020, 3, 21, 23,0,0),
@@ -32,6 +34,7 @@ public class ChangeEventList {
                         people.get(4), people.get(7), people.get(2), people.get(0)
                 ))));
 
+
         events.add(new EventItem("Orientation Week",
                 new Date(2020, 9, 1, 8,0,0),
                 new Date(2020, 12, 1, 23,0,0),
@@ -39,8 +42,9 @@ public class ChangeEventList {
                 "Join your new classmates as we play games.",
                 R.drawable.event_image_crowd_1,
                 new ArrayList<>(Arrays.asList(
-                        people.get(4), people.get(2), people.get(5), people.get(1)
+                        people.get(4), people.get(2),  people.get(1)
                 ))));
+
 
         events.add(new EventItem("Karaoke",
                 new Date(2020, 3, 14, 20,0,0),
@@ -49,9 +53,10 @@ public class ChangeEventList {
                 "Weekly karaoke night where you and your friends can battle-off.",
                 R.drawable.event_image_karaoke,
                 new ArrayList<>(Arrays.asList(
-                        people.get(4), people.get(7), people.get(2), people.get(0), people.get(5),
+                        people.get(4), people.get(7), people.get(2), people.get(0),
                         people.get(1), people.get(6), people.get(3)
                 ))));
+
     }
 
     public ChangeEventList(){

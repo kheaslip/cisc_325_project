@@ -12,6 +12,7 @@ public class EventItem {
     private String mDetails;
     private int mImageResource;
     private ArrayList<Person> mAttendees;
+    private static Boolean checked;
 
     public EventItem(String name, Date start, Date end, String location, String details,
                      int imageResource, ArrayList<Person> attendees) {
@@ -59,5 +60,14 @@ public class EventItem {
     public boolean hasImage() {
         return mImageResource != 0;
     }
+
+    public static void stayVisible(Boolean checked) {
+        checked = checked;
+    }
+
+    public static Boolean getChecked() {
+        return checked;
+    }
+
 
 }
