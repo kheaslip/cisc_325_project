@@ -10,7 +10,7 @@ To get this project, download or the clone the repo to your machine.  Then open 
 
 The prerequisites for exploring the code within Android Studio consists of the system requirements of [Android Studio](https://developer.android.com/studio#system-requirements-a-namerequirementsa).
 
-To test or run the code, a compatible android emulator or device that can run API level 15: Android 4.0.3 (IceCreamSandwich), or higher is needed.  Android Studio provides an [emulator](https://developer.android.com/studio/run/emulator) as well as a way to run the app through a [USB connected device](https://developer.android.com/studio/run/device).
+To test or run the code, a compatible android emulator or device that can run API level 19: Android 4.4 (KitKat), or higher is needed.  Android Studio provides an [emulator](https://developer.android.com/studio/run/emulator) as well as a way to run the app through a [USB connected device](https://developer.android.com/studio/run/device).
 
 ### Installing
 
