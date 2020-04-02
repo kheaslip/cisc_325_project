@@ -1,10 +1,10 @@
-[android_studio_setup_avd_1]: file:///./img/avd_1.png "AVD setup menu: device type"
-[android_studio_setup_avd_2]: file:///./img/avd_2.png "AVD setup menu: API type"
-[android_studio_setup_usb_1]: file:///./img/usb_1.png "USB connected device menu"
-[android_studio_setup_usb_2]: file:///./img/usb_2.png "USB connected device button"
-[android_studio_setup_usb_3]: file:///./img/usb_3.png "USB connected device button"
-[android_studio_setup_device_selection_1]: file:///./img/device_selection_1.png "Device selection"
-[android_studio_setup_sdk_tools]: file:///./img/sdk_tools.png "SDK Tools Menu"
+[android_studio_setup_avd_1]: ./img/avd_1.png "AVD setup menu: device type"
+[android_studio_setup_avd_2]: ./img/avd_2.png "AVD setup menu: API type"
+[android_studio_setup_usb_1]: ./img/usb_1.png "USB connected device menu"
+[android_studio_setup_usb_2]: ./img/usb_2.png "USB connected device button"
+[android_studio_setup_usb_3]: ./img/usb_3.png "USB connected device button"
+[android_studio_setup_device_selection_1]: ./img/device_selection_1.png "Device selection"
+[android_studio_setup_sdk_tools]: ./img/sdk_tools.png "SDK Tools Menu"
 
 # CISC 365 Project
 
