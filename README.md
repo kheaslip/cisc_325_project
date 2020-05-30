@@ -6,7 +6,7 @@
 [android_studio_setup_device_selection_1]: ./img/device_selection_1.png "Device selection"
 [android_studio_setup_sdk_tools]: ./img/sdk_tools.png "SDK Tools Menu"
 
-# CISC 365 Project
+# CISC 325 Project
 
 This project aims to create a prototype for an android app that provides an easy interface for first-year university students to plan time with friends and find & join activities where they could potentially meet new friends.
 
